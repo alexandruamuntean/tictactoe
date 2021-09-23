@@ -101,23 +101,14 @@ input[type="reset"] {
 /* font imports */
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
 
+
 /* root values */
 :root {
-  --primary: hsla(0, 94%, 67%, 0.9);
-  --primary--highlight: hsla(0, 94%, 72%, 0.9);
-  --secondary: hsl(154, 59%, 51%);
-  --secondary--highlight: hsl(154, 59%, 60%);
-  --tertiary-accent: hsl(248, 32%, 49%);
-  --dark-neutral: hsl(249, 10%, 26%);
-  --dark-neutral-light: hsl(249, 10%, 50%);
-  --gray-neutral: hsl(246, 25%, 77%);
-  --gray-neutral-light: hsl(0, 0%, 94%);
-  --shadow-1: 0px 10px 0px rgba(0, 0, 0, 0.2);
-  --shadow-2: 0px 4px 0px hsl(154, 59%, 42%);
-  --shadow-2--active: 0px 2px 0px hsl(154, 59%, 52%);
-  --shadow-3: 0px 3px 0px hsla(0, 94%, 60%, 0.9);
-  --shadow-3--active: 0px 2px 0px hsl(0, 94%, 67%);
-  --button--active: translateY(2px);
+  --color-primary: hsl(237, 18%, 59%);
+  --color-secondary: hsl(345, 95%, 68%);
+  --color-tertiary-desaturated: hsl(236, 21%, 26%);
+  --color-tertiary-dark: hsl(235, 16%, 14%);
+  --color-tertiary-very-dark: hsl(234, 17%, 12%);
   --animation-short: all 0.15s ease-out;
   --animation-medium: all 0.25s ease-out;
   --animation-long: all 0.45s ease-out;
@@ -130,16 +121,22 @@ html {
 
 body {
   font-family: 'Red Hat Text', sans-serif;
+  font-size: 1.4rem;
 }
 
 .header {
-  background-color: var(--primary);
   background-position: center;
   background-size: cover;
   background-blend-mode: color;
 }
 
-.main {
+.wrapper {
   width: 100%;
-  background-color: var(--gray-neutral-light);
+  min-height: 100vh;
+  background: url('/img/pattern-hills.svg') no-repeat bottom/contain ,url('/img/bg-stars.svg') repeat top/contain;
+  // background-position: bottom;
+  // background-repeat: no-repeat;
+  // background-size:c;
+  background-color: var(--color-tertiary-dark);
 }
+
