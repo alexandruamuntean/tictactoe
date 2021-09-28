@@ -5,12 +5,13 @@
   letter-spacing: 3px;
   transition: var(--animation-short);
   border: 2px solid transparent;
-  
-  &:hover{
+
+  &:hover {
     background-color: transparent;
   }
 
-  &--start{
+  &--start,
+  &--submit {
     color: white;
     background-color: var(--color-secondary);
 
@@ -19,12 +20,12 @@
     }
   }
 
-  &--select{
+  &--select {
     background-color: white;
     color: var(--color-tertiary-very-dark);
 
-    &:hover{
-      border:2px solid white;
+    &:hover {
+      border: 2px solid white;
       color: white;
     }
   }

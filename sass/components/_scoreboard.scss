@@ -1,0 +1,13 @@
+.scoreboard {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.player1,
+.player2 {
+  color: white;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}

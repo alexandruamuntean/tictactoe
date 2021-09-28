@@ -18,26 +18,26 @@
         <button class="button button--select" id='PvP' data-game='PvP'>Player vs Player</button>
         <button class="button button--select" id='PvC' data-game='PvC'>Player vs Computer</button>
       </div>
+      <div id='form-holder'>
+      </div>
     </header>
     <main class='main'>
-      <div class="grid gameboard " id='gameboard'>
-        <div class="grid__cell">
-          <div class="grid__choice">
-            <img src="img/player-1-choice.svg" alt="">
-          </div>
-        </div>
-        <div class="grid__cell">
-          <div class="grid__choice">
-            <img src="img/player-2-choice.svg" alt="">
-          </div>
-        </div>
-        <div class="grid__cell"></div>
-        <div class="grid__cell"></div>
-        <div class="grid__cell"></div>
-        <div class="grid__cell"></div>
-        <div class="grid__cell"></div>
-        <div class="grid__cell"></div>
-        <div class="grid__cell"></div>
+      <div id="scoreboard">
+      </div>
+      <div class="grid gameboard" id='gameboard'>
+        <div class="grid__cell" data-cell>X</div>
+        <div class="grid__cell" data-cell></div>
+        <div class="grid__cell" data-cell></div>
+        <div class="grid__cell" data-cell></div>
+        <div class="grid__cell" data-cell></div>
+        <div class="grid__cell" data-cell></div>
+        <div class="grid__cell" data-cell></div>
+        <div class="grid__cell" data-cell></div>
+        <div class="grid__cell" data-cell></div>
+      </div>
+      <div class="winning-message">
+        <div class="" data-winning-message-text></div>
+        <button class="button button--submit">Restart</button>
       </div>
     </main>
   </div>

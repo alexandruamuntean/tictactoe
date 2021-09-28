@@ -1,0 +1,17 @@
+.player-name {
+  input[type="submit"] {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: var(--animation-short);
+    border: 2px solid transparent;
+    color: white;
+    background-color: var(--color-secondary);
+
+    &:hover {
+      background-color: transparent;
+      border: 2px solid var(--color-secondary);
+    }
+  }
+}

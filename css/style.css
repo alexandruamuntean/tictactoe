@@ -117,14 +117,16 @@ input[type="reset"] {
   --color-tertiary-very-dark: hsl(234, 17%, 12%);
   --animation-short: all 0.15s ease-out;
   --animation-medium: all 0.25s ease-out;
-  --animation-long: all 0.45s ease-out; }
+  --animation-long: all 0.45s ease-out;
+  --cell-size: 15rem;
+  --mark-size: calc(var(--cell-size) * 0.9); }
 
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
 
 body {
-  font-family: 'Red Hat Text', sans-serif;
+  font-family: "Red Hat Text", sans-serif;
   font-size: 1.4rem; }
 
 .header {
@@ -148,6 +150,17 @@ body {
 .header {
   opacity: 0; }
 
+.player-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .player-name > *:not(:last-child) {
+    margin-bottom: 1rem; }
+  .player-name input[type="text"] {
+    padding: 1rem 2rem;
+    border: none; }
+
 .logo {
   font-size: 3rem;
   font-weight: 700;
@@ -164,10 +177,10 @@ body {
   border: 2px solid transparent; }
   .button:hover {
     background-color: transparent; }
-  .button--start {
+  .button--start, .button--submit {
     color: white;
     background-color: var(--color-secondary); }
-    .button--start:hover {
+    .button--start:hover, .button--submit:hover {
       border: 2px solid var(--color-secondary); }
   .button--select {
     background-color: white;
@@ -178,16 +191,44 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem; }
+  grid-template-columns: repeat(3, auto);
+  gap: 0.75rem;
+  justify-items: center;
+  align-items: center; }
   .grid__cell {
-    height: 15rem;
-    width: 15rem;
+    height: var(--cell-size);
+    width: var(--cell-size);
     background-color: white;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    font-size: var(--mark-size); }
   .grid__choice {
     height: 80%; }
     .grid__choice img {
       height: 100%; }
+
+.player-name input[type="submit"] {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: var(--animation-short);
+  border: 2px solid transparent;
+  color: white;
+  background-color: var(--color-secondary); }
+  .player-name input[type="submit"]:hover {
+    background-color: transparent;
+    border: 2px solid var(--color-secondary); }
+
+.scoreboard {
+  display: flex;
+  margin-bottom: 2rem; }
+
+.player1,
+.player2 {
+  color: white;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700; }
