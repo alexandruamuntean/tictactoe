@@ -1,0 +1,21 @@
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+
+  &__cell{
+    height: 15rem;
+    width: 15rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__choice {
+    height: 80%;
+    img{
+      height: 100%;
+    }
+  }
+}

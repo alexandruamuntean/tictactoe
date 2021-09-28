@@ -11,15 +11,37 @@
 
 <body>
   <div class="wrapper">
-    <div class="section-top">
-      <header class="header">
-        <span class="logo">Tic Tac Toe</span>
-      </header>
-    </div>
-    <div class="section-bottom">
-      <p>hello</p>
-    </div>
+    <header class="header" id='header'>
+      <span class="logo u-mb-m">Tic Tac Toe</span>
+      <button class="button button--start" id="play">Play</button>
+      <div class="game-options hidden" id='game-options'>
+        <button class="button button--select" id='PvP' data-game='PvP'>Player vs Player</button>
+        <button class="button button--select" id='PvC' data-game='PvC'>Player vs Computer</button>
+      </div>
+    </header>
+    <main class='main'>
+      <div class="grid gameboard " id='gameboard'>
+        <div class="grid__cell">
+          <div class="grid__choice">
+            <img src="img/player-1-choice.svg" alt="">
+          </div>
+        </div>
+        <div class="grid__cell">
+          <div class="grid__choice">
+            <img src="img/player-2-choice.svg" alt="">
+          </div>
+        </div>
+        <div class="grid__cell"></div>
+        <div class="grid__cell"></div>
+        <div class="grid__cell"></div>
+        <div class="grid__cell"></div>
+        <div class="grid__cell"></div>
+        <div class="grid__cell"></div>
+        <div class="grid__cell"></div>
+      </div>
+    </main>
   </div>
+  <script src='index.js'></script>
 </body>
 
 </html>

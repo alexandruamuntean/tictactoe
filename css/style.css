@@ -1,5 +1,26 @@
-/* Box sizing rules */
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap");
+.u-mb-l {
+  margin-bottom: 40px; }
+
+.u-mb-m {
+  margin-bottom: 20px; }
+
+.u-mb-s {
+  margin-bottom: 10px; }
+
+.hidden {
+  display: none !important; }
+
+.toggle-main {
+  margin-left: 0; }
+
+.toggle-header {
+  transform: translateX(-38.5rem); }
+
+.toggle-button {
+  transform: rotate(180deg); }
+
+/* Box sizing rules */
 *,
 *::before,
 *::after {
@@ -90,6 +111,7 @@ input[type="reset"] {
 :root {
   --color-primary: hsl(237, 18%, 59%);
   --color-secondary: hsl(345, 95%, 68%);
+  --color-secondary--highlight: hsl(345, 95%, 78%);
   --color-tertiary-desaturated: hsl(236, 21%, 26%);
   --color-tertiary-dark: hsl(235, 16%, 14%);
   --color-tertiary-very-dark: hsl(234, 17%, 12%);
@@ -116,12 +138,56 @@ body {
   background: url("/img/pattern-hills.svg") no-repeat bottom/contain, url("/img/bg-stars.svg") repeat top/contain;
   background-color: var(--color-tertiary-dark); }
 
-.wrapper {
+.wrapper,
+.header {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
+
+.header {
+  opacity: 0; }
 
 .logo {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1rem; }
+
+.button {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: var(--animation-short);
+  border: 2px solid transparent; }
+  .button:hover {
+    background-color: transparent; }
+  .button--start {
+    color: white;
+    background-color: var(--color-secondary); }
+    .button--start:hover {
+      border: 2px solid var(--color-secondary); }
+  .button--select {
+    background-color: white;
+    color: var(--color-tertiary-very-dark); }
+    .button--select:hover {
+      border: 2px solid white;
+      color: white; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; }
+  .grid__cell {
+    height: 15rem;
+    width: 15rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .grid__choice {
+    height: 80%; }
+    .grid__choice img {
+      height: 100%; }

@@ -106,6 +106,7 @@ input[type="reset"] {
 :root {
   --color-primary: hsl(237, 18%, 59%);
   --color-secondary: hsl(345, 95%, 68%);
+  --color-secondary--highlight: hsl(345, 95%, 78%);
   --color-tertiary-desaturated: hsl(236, 21%, 26%);
   --color-tertiary-dark: hsl(235, 16%, 14%);
   --color-tertiary-very-dark: hsl(234, 17%, 12%);
@@ -134,9 +135,6 @@ body {
   width: 100%;
   min-height: 100vh;
   background: url('/img/pattern-hills.svg') no-repeat bottom/contain ,url('/img/bg-stars.svg') repeat top/contain;
-  // background-position: bottom;
-  // background-repeat: no-repeat;
-  // background-size:c;
   background-color: var(--color-tertiary-dark);
 }
 
