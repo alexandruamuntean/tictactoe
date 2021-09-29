@@ -237,13 +237,26 @@ body {
   border: calc(var(--mark-size) * 0.15) solid whitesmoke;
   border-radius: 50%; }
 
-.grid.x .grid__cell:not(.x):hover::before,
-.grid.x .grid__cell:not(.x):hover::after {
+.grid.x .grid__cell:not(.x):not(.o):hover::before, .grid.x .grid__cell:not(.x):not(.o):hover::after {
   content: "";
   width: calc(var(--mark-size) * 0.15);
   height: var(--mark-size);
   position: absolute;
   background-color: var(--color-primary); }
+
+.grid.x .grid__cell:not(.x):not(.o):hover::before {
+  transform: rotate(45deg); }
+
+.grid.x .grid__cell:not(.x):not(.o):hover::after {
+  transform: rotate(-45deg); }
+
+.grid.o .grid__cell:not(.x):not(.o):hover::before {
+  content: "";
+  width: var(--mark-size);
+  height: var(--mark-size);
+  position: absolute;
+  border: calc(var(--mark-size) * 0.15) solid var(--color-primary);
+  border-radius: 50%; }
 
 .player-name input[type="submit"] {
   font-size: 1.6rem;
@@ -269,3 +282,22 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 700; }
+
+.winning-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-tertiary-very-dark); }
+  .winning-message__text {
+    font-size: 3.6rem;
+    color: whitesmoke;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem; }
+  .winning-message.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
