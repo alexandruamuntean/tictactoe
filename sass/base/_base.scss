@@ -113,7 +113,7 @@ input[type="reset"] {
   --animation-medium: all 0.25s ease-out;
   --animation-long: all 0.45s ease-out;
   --cell-size: 15rem;
-  --mark-size: calc(var(--cell-size) * 0.9);
+  --mark-size: calc(var(--cell-size) * 0.7);
 }
 
 html {
